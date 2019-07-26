@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> shallow 1`] = `
+<styled.button
+  style={
+    Object {
+      "backgroundColor": "#1F8EFA",
+      "maxWidth": "none",
+      "width": "none",
+    }
+  }
+  type="button"
+>
+  some text
+</styled.button>
+`;
+
+exports[`<Button /> shallow with fluid prop 1`] = `
+<styled.button
+  style={
+    Object {
+      "backgroundColor": "#1F8EFA",
+      "maxWidth": "100%",
+      "width": "100%",
+    }
+  }
+  type="button"
+>
+  some text
+</styled.button>
+`;
+
+exports[`<Button /> shallow with transparent prop 1`] = `
+<styled.button
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "maxWidth": "none",
+      "width": "none",
+    }
+  }
+  type="button"
+>
+  some text
+</styled.button>
+`;

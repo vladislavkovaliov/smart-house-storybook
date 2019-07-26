@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> shallow 1`] = `
+<styled.div
+  color="#1F8EFA"
+  fontSize={12}
+>
+  mock-text
+</styled.div>
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> shallow 1`] = `
+<styled.div
+  maxWidth="327px"
+>
+  <styled.label
+    htmlFor="mock-id"
+  >
+    mock-label-text
+  </styled.label>
+  <styled.input
+    bg="#242E42"
+    color="#1F8EFA"
+    id="mock-id"
+    name="mock-name"
+    onChange={[Function]}
+    type="text"
+  />
+</styled.div>
+`;
