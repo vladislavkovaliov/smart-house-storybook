@@ -10,5 +10,8 @@ module.exports = {
     '<rootDir>/src/core/atoms/index.js',
     '<rootDir>/src/core/index.js',
     '<rootDir>/src/constants',
-  ]
+  ],
+  moduleNameMapper: {
+    "\\.(svg)$": "<rootDir>/__mocks__/fileMock.js"
+  },
 };

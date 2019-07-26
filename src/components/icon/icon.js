@@ -19,7 +19,14 @@ export function Icon(props) {
   );
 }
 
+Icon.propTypes = {
+  iconName: PropTypes.string.isRequired,
+  state: PropTypes.bool.isRequired,
+  width: PropTypes.number,
+  height: PropTypes.number,
+};
+
 Icon.defaultProps = {
-  width: '34',
-  height: '34',
+  width: 34,
+  height: 34,
 };
