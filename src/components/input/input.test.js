@@ -1,4 +1,4 @@
-import { Input } from './Input'
+import { Input } from './input'
 
 describe('<Input />', () => {
   test('shallow', () => {
