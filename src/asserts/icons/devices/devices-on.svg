@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atoms-/-icons-/illustrated/-Devices_ON" transform="translate(-19.000000, -19.000000)">
+            <g id="Group" transform="translate(20.000000, 20.000000)">
+                <path d="M52.472,3.55271368e-15 L7.528,3.55271368e-15 C3.377,3.55271368e-15 3.55271368e-15,3.377 3.55271368e-15,7.528 L3.55271368e-15,52.471 C3.55271368e-15,56.623 3.377,60 7.528,60 L52.471,60 C56.623,60 60,56.623 60,52.472 L60,7.528 C60,3.377 56.623,3.55271368e-15 52.472,3.55271368e-15 Z" id="Shape" stroke="#1F8EFA" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M13,20 C9.13400675,20 6,16.8659932 6,13 C6,9.13400675 9.13400675,6 13,6 C16.8659932,6 20,9.13400675 20,13 C20,16.8659932 16.8659932,20 13,20 Z" id="Oval-3-Copy" fill="#1F8EFA"></path>
+                <circle id="Oval-3-Copy-2" fill="#FFFFFF" cx="24" cy="17" r="2"></circle>
+                <circle id="Oval-3-Copy-3" fill="#FFFFFF" cx="31" cy="17" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

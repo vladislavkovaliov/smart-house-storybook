@@ -1,0 +1,33 @@
+{
+  "name": "smart-house-storybook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@storybook/addon-info": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/theming": "^5.1.9",
+    "hex-to-rgba": "^2.0.0",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "react-modal": "^3.8.2",
+    "styled-components": "^4.3.2",
+    "styled-system": "^5.0.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "babel-loader": "^8.0.6"
+  }
+}
