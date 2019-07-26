@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.com/vladislavkovaliov/smart-house-storybook.svg?branch=master)](https://travis-ci.com/vladislavkovaliov/smart-house-storybook)
