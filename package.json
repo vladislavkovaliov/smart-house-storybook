@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -12,13 +12,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-info": "^5.1.9",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/theming": "^5.1.9",
+    "babel-jest": "^24.8.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
     "hex-to-rgba": "^2.0.0",
+    "jest": "^24.8.0",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react-modal": "^3.8.2",
+    "react-test-renderer": "^16.8.6",
     "styled-components": "^4.3.2",
     "styled-system": "^5.0.12"
   },

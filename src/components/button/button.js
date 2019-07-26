@@ -1,20 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import colors from '../../constants/colors';
+import { colors } from '../../constants';
 
-export const padding = 16;
-export const height = 33;
-
-const Btn = styled.button`
-  color: ${colors.white};
-  border: none;
-  text-transform: uppercase;
-  font-family: Roboto, sans-serif;
-  height: ${height}px;
-  padding-right: ${padding}px;
-  padding-left: ${padding}px;
-`;
+import { Styled } from '../../core';
 
 export function Button({ text, type, isFluid, isTransparent, ...props }) {
   const maxWidth = isFluid ? '100%' : 'none';
@@ -22,7 +10,7 @@ export function Button({ text, type, isFluid, isTransparent, ...props }) {
   const backgroundColor = isTransparent ? 'transparent' : `${colors.blue}`;
 
   return (
-    <Btn
+    <Styled.Btn
       style={{
         maxWidth,
         width,
@@ -32,7 +20,7 @@ export function Button({ text, type, isFluid, isTransparent, ...props }) {
       {...props}
     >
       {text}
-    </Btn>
+    </Styled.Btn>
   );
 }
 
@@ -48,5 +36,3 @@ Button.defaultProps = {
   isTransparent: false,
   isFluid: false,
 };
-
-export default Button;

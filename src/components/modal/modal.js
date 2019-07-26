@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { color, typography } from 'styled-system';
 
 import colors from '../../constants/colors';
-import Button from '../button/button';
+import Button from '../button';
 import FlexBox from '../shared/flex-box';
 
 const SmartHouseModalHeader = styled.div`
@@ -15,7 +15,6 @@ const SmartHouseModalHeader = styled.div`
   padding-right: 16px;
 `;
 const SmartHouseModalTitle = styled.div`
-  //color: green;
   ${color};
 `;
 const SmartHouseModalContent = styled.div``;

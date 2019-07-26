@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { color, typography } from 'styled-system';
 import propTypes from 'prop-types';
 import Default from '../../../constants/default';
-import colors from '../../../constants/colors';
+import { colors } from '../../../constants';
 
 const Font = styled.div`
   ${color};
