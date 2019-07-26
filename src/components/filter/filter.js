@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
-import colors from '../../constants/colors';
+import { colors } from '../../constants';
 
 const StyledContainer = styled.div`
   background-color: ${colors.primary};

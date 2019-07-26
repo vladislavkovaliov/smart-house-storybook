@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { color, typography } from 'styled-system';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Default from '../../../constants/default';
 import { colors } from '../../../constants';
 
@@ -11,7 +11,6 @@ const Font = styled.div`
 `;
 
 export default function Text({ text, fontSize, color, ...props }) {
-  console.log(color);
   return (
     <Font
       fontSize={fontSize}
@@ -22,8 +21,9 @@ export default function Text({ text, fontSize, color, ...props }) {
 }
 
 Text.propTypes = {
-  fontSize: propTypes.number,
-  color: propTypes.string,
+  fontSize: PropTypes.number,
+  color: PropTypes.string,
+  text: PropTypes.string.isRequired,
 };
 
 Text.defaultProps = {

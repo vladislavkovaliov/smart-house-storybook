@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { color } from 'styled-system';
 
 import { Styled } from '../../core';
-
 import { colors } from '../../constants';
 
 export const StyledInput = styled.input`
