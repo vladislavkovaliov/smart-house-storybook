@@ -2,7 +2,7 @@
 
 exports[`<Input /> shallow 1`] = `
 <styled.div
-  maxWidth="327px"
+  width="327px"
 >
   <styled.label
     htmlFor="mock-id"

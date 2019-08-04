@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import colors from '../../constants/colors';
+import colors from '../../../constants/colors';
 
 const SwitchContainer = styled.label`
   display: flex;
@@ -37,9 +37,8 @@ const Hidden = styled.div`
 `;
 
 export function Switch(props) {
-  debugger;
-  const [isEnabled, setEnabled] = useState(false);
   const { id, onChange, state } = props;
+  const [isEnabled, setEnabled] = useState(state);
 
   return (
     <SwitchContainer>

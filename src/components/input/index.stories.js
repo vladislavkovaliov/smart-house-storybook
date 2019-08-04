@@ -14,7 +14,7 @@ const optionsType = {
 storiesOf('Input', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('Simple input', () => {
+  .add('Simple input fluid', () => {
     return (
       <Input
         id="id"
@@ -22,6 +22,19 @@ storiesOf('Input', module)
         onChange={action('onChange')}
         type={select('type', optionsType, optionsType.text)}
         labelText={text('labelText', 'label')}
+        isFluid
+      />
+    );
+  })
+  .add('Simple input not fluid', () => {
+    return (
+      <Input
+        id="id"
+        name="name"
+        onChange={action('onChange')}
+        type={select('type', optionsType, optionsType.text)}
+        labelText={text('labelText', 'label')}
+        isFluid={false}
       />
     );
   });

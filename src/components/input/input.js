@@ -36,12 +36,12 @@ export const StyledLabel = styled.label`
 `;
 
 export function Input(props) {
-  const { type, width, labelText, id, name, ...restProps } = props;
+  const { type, width, labelText, id, name, isFluid, ...restProps } = props;
   const { blue: color, primary: bgColor } = colors;
 
   return (
     <Styled.Container
-      maxWidth={width}
+      width={isFluid ? '100%' : width}
     >
       <StyledLabel
         htmlFor={id}
@@ -65,10 +65,12 @@ Input.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   labelText: PropTypes.string.isRequired,
+  isFluid: PropTypes.bool,
 };
 
 Input.defaultProps = {
   onChange: () => {},
   type: 'text',
   width: '327px',
+  isFluid: false,
 };
