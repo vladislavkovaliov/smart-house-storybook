@@ -9,12 +9,6 @@ module.exports = {
     library: '',
     libraryTarget: 'commonjs'
   },
-  resolve: {
-    alias: {
-      'react': path.resolve(__dirname, 'node_modules/react'),
-      'react-dom': path.resolve(__dirname, 'node_modules/react-dom')
-    }
-  },
   module: {
     rules: [
       {
@@ -22,11 +16,11 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
-        }
+        },
       }
     ]
   },
-  devtool: false,
+  devtool: 'source-map',
   plugins: [
     new webpack.SourceMapDevToolPlugin({})
   ]
