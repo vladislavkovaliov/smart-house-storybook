@@ -23,5 +23,9 @@ module.exports = {
   devtool: 'source-map',
   plugins: [
     new webpack.SourceMapDevToolPlugin({})
-  ]
+  ],
+  externals: {
+    react: 'react', // Case matters here
+    'react-dom': 'react-dom' // Case matters here
+  }
 };
