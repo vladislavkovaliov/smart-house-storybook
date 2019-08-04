@@ -6,7 +6,7 @@ import { select, withKnobs, text } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { PageSettingModal } from './page-setting-modal';
 import {SmartHouseModal} from "../../components/modal/modal";
-
+import { Switch } from '../../../dist/bundle';
 
 class PageSetting extends React.Component {
   constructor () {
@@ -28,8 +28,10 @@ class PageSetting extends React.Component {
   }
 
   render() {
+    console.log(Switch);
     return (
       <div>
+        <Switch onChange={() => {}}/>
         <button onClick={this.handleOpenModal}>Trigger Modal</button>
         <PageSettingModal
           showModal={this.state.showModal}

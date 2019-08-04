@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   entry: './index.js',
@@ -7,6 +8,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     library: '',
     libraryTarget: 'commonjs'
+  },
+  resolve: {
+    alias: {
+      'react': path.resolve(__dirname, 'node_modules/react'),
+      'react-dom': path.resolve(__dirname, 'node_modules/react-dom')
+    }
   },
   module: {
     rules: [
@@ -18,5 +25,9 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  devtool: false,
+  plugins: [
+    new webpack.SourceMapDevToolPlugin({})
+  ]
 };

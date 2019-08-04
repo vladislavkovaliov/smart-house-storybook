@@ -9,7 +9,11 @@ export default {
   output: {
     file:   'dist/bundle.js',
     format: 'cjs',
-    name: 'bar'
+    name: 'bar',
+    globals: {
+      react: 'React',
+      'react-dom': 'ReactDOM',
+    }
   },
   plugins:
     [
@@ -24,25 +28,6 @@ export default {
         exclude: [
           'node_modules/process-es6/**'
         ],
-        namedExports:
-          {
-            './node_modules/react/index.js':
-              [
-                'cloneElement',
-                'createElement',
-                'PropTypes',
-                'Children',
-                'Component',
-                'createContext',
-                'useState',
-              ],
-            './node_modules/react-is/index.js':
-              [
-                'isElement',
-                'isValidElementType',
-                'ForwardRef',
-              ],
-          }
       }),
       replace({
         'process.env.NODE_ENV': JSON.stringify( 'production' )
