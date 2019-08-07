@@ -1,36 +1,37 @@
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
-import nodeResolve from 'rollup-plugin-node-resolve';
-import { uglify } from 'rollup-plugin-uglify';
-import replace from 'rollup-plugin-replace';
-console.log(42);
+import svg from 'rollup-plugin-svg';
+
+const globals = { react: "React", "react-dom": "ReactDOM" };
+
 export default {
-  input:  'index.js',
+  input: './index.js',
   output: {
-    file:   'dist/bundle.js',
+    file: 'dist/index.js',
     format: 'cjs',
-    name: 'bar',
-    globals: {
-      react: 'React',
-      'react-dom': 'ReactDOM',
-    }
+    globals,
+    sourcemap: true
   },
-  plugins:
-    [
-      babel({
-        exclude: 'node_modules/**'
-      }),
-      nodeResolve({
-        jsnext: true
-      }),
-      commonjs({
-        include: 'node_modules/**',
-        exclude: [
-          'node_modules/process-es6/**'
+  plugins: [
+    svg(),
+    babel({
+      exclude: "node_modules/**",
+      // runtimeHelpers: true
+    }),
+    commonjs({
+      include: 'node_modules/**',
+      namedExports: {
+        react: [
+          "cloneElement",
+          "createFactory",
+          "Component",
+          "PropTypes",
+          "createElement",
+          "createContext"
         ],
-      }),
-      replace({
-        'process.env.NODE_ENV': JSON.stringify( 'production' )
-      }),
-    ]
+        "react-dom": ["render"],
+        "react-is": ["isElement", "isValidElementType", "ForwardRef"]
+      }
+    }),
+  ],
 }
