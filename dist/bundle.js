@@ -354,6 +354,7 @@ function Input(props) {
   var color = colors.blue,
       bgColor = colors.primary;
   return React__default.createElement(Styled.Container, {
+    className: name,
     width: isFluid ? '100%' : width
   }, React__default.createElement(StyledLabel, {
     htmlFor: id

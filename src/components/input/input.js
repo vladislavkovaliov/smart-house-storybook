@@ -41,6 +41,7 @@ export function Input(props) {
 
   return (
     <Styled.Container
+      className={name}
       width={isFluid ? '100%' : width}
     >
       <StyledLabel
