@@ -7,7 +7,7 @@ const globals = { react: "React", "react-dom": "ReactDOM" };
 export default {
   input: './index.js',
   output: {
-    file: 'dist/index.js',
+    file: 'dist/bundle.js',
     format: 'cjs',
     globals,
     sourcemap: true
