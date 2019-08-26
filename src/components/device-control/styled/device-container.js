@@ -6,6 +6,7 @@ export default styled.div`
   flex-direction: column;
   flex-wrap: nowrap;
   max-width: 218px;
+  min-width: 218px;
   height: 99px;
   border-radius: 5px;
   background-color: ${colors.secondary2};

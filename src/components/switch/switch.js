@@ -37,7 +37,6 @@ const Hidden = styled.div`
 `;
 
 export function Switch(props) {
-  debugger;
   const [isEnabled, setEnabled] = useState(false);
   const { id, onChange, state } = props;
 

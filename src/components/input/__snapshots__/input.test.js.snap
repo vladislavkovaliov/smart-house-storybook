@@ -2,6 +2,7 @@
 
 exports[`<Input /> shallow 1`] = `
 <styled.div
+  className="mock-name"
   width="327px"
 >
   <styled.label
