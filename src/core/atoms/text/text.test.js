@@ -5,6 +5,8 @@ describe('<Text />', () => {
     const wrapper = shallow(
       <Text
         text="mock-text"
+        fontSize={13}
+        color="red"
       />
     );
 

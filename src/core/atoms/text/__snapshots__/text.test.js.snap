@@ -2,8 +2,8 @@
 
 exports[`<Text /> shallow 1`] = `
 <styled.div
-  color="#1F8EFA"
-  fontSize={12}
+  color="red"
+  fontSize={13}
 >
   mock-text
 </styled.div>
