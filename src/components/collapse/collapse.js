@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Styled from '../../core/styled';
+import { Container, Flex } from '../../core/styled';
 import classnames from 'classnames';
 import { colors } from "../../constants";
 import {width} from "styled-system";
@@ -18,7 +18,7 @@ export const CircleBtn = styled.button`
   border: none;
 `;
 
-export const StyledCollapse = styled(Styled.Container)`
+export const StyledCollapse = styled(Container)`
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -38,15 +38,6 @@ export const Temp = styled.div`
   }
 `;
 
-export const Flex = styled(Styled.Flex)`
-  height: 100%;
-  padding: 0 16px;
-  overflow-x: scroll;
-  
-  & > div {
-    margin: 0 8px;
-  }
-`;
 
 export const Temp2 = styled.button`
   height: 99px;
@@ -83,7 +74,7 @@ export function Collapse(props) {
     <StyledCollapse>
       <CircleBtn onClick={onClick} />
       <Temp className={classnames({ active: isOpened })}>
-        <Styled.Container
+        <Container
           height="150px"
           width="100%"
         >
@@ -94,7 +85,7 @@ export function Collapse(props) {
             <Temp2 />
             {items.map((item) => renderFn(item))}
           </Flex>
-        </Styled.Container>
+        </Container>
       </Temp>
     </StyledCollapse>
   );

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Switch /> shallow() 1`] = `
+<styled.div
+  position="relative"
+  width={26}
+>
+  <Styled(styled.div) />
+  <styled.label
+    htmlFor="__id__"
+    isEnabled={true}
+  />
+  <styled.div
+    display="none"
+  >
+    <input
+      id="__id__"
+      onChange={[Function]}
+      type="checkbox"
+    />
+  </styled.div>
+</styled.div>
+`;

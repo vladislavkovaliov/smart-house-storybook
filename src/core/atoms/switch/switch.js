@@ -1,71 +1,52 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import colors from '../../../constants/colors';
+import { Display, Container} from '../../styled';
 
-const SwitchContainer = styled.label`
-  display: flex;
-  align-items: center;
-  width: 26px;
-  height: 13px;
-  position: relative;
-`;
-
-const SwitcherBackground = styled.div`
+export const Background = styled(Display)`
   background-color: ${colors.primary};
   height: 10px;
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
   width: 100%;
-
   border-radius: 8px;
 `;
 
-const Circle = styled.div`
+export const Circle = styled.label`
   height: 13px;
   width: 13px;
   position: absolute;
   border-radius: 50%;
-
+  cursor: pointer;
   top: 0;
   background-color: ${props =>
     props.isEnabled ? colors.blue : colors.secondary3};
   ${props => (props.isEnabled ? 'right' : 'left')}: 0;
 `;
 
-const Hidden = styled.div`
-  display: none;
-`;
-
 export function Switch(props) {
-  const { id, onChange, state } = props;
-  const [isEnabled, setEnabled] = useState(state);
-
+  const { id, onChange, isEnabled } = props;
   return (
-    <SwitchContainer>
-      <SwitcherBackground htmlFor={id} />
-      <Circle isEnabled={isEnabled} />
-      <Hidden>
+    <Container position="relative" width={26}>
+      <Background />
+      <Circle htmlFor={id} isEnabled={isEnabled} />
+      <Display display="none">
         <input
-          onChange={event => {
-            onChange(event);
-            setEnabled(event.target.checked);
-          }}
+          onChange={onChange}
           id={id}
           type="checkbox"
         />
-      </Hidden>
-    </SwitchContainer>
+      </Display>
+    </Container>
   );
 }
 
 Switch.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  state: PropTypes.bool
-};
-Switch.defaultProps = {
-  id: 'switcher',
-  state: false
+  isEnabled: PropTypes.bool.isRequired,
 };
 
 export default Switch;

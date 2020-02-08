@@ -1,25 +1,9 @@
 import React from "react";
 import { colors } from '../../constants';
-import Styled from '../../core/styled';
+import { Flex, Container } from '../../core/styled';
 import styled from 'styled-components';
 import { Text } from '../../core/atoms';
 import { flex, space, border } from 'styled-system';
-
-export const Container = styled(Styled.Container)`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-export const Flex = styled(Styled.Flex)`
-  display: flex;
-  ${flex};
-  ${space};
-  ${border};
-  //border-left: 1px solid ${colors.primary};
-  //border-right: 1px solid ${colors.primary};
-`;
 
 const mocks = [
   {

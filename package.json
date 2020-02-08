@@ -1,5 +1,5 @@
 {
-  "name": "smart-house-storybook",
+  "name": "@vladislavkovaliov/smart-house-storybook",
   "version": "1.0.0",
   "description": "",
   "main": "dist/bundle.js",
@@ -11,9 +11,15 @@
     "rollup": "rollup -c rollup.config.js",
     "webpack": "webpack --mode=development"
   },
+  "repository": {
+    "url": "git@github.com:vladislavkovaliov/smart-house-storybook.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "7.5.5",
     "@babel/preset-env": "7.5.5",

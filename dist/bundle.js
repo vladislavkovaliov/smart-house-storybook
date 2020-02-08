@@ -140,7 +140,7 @@ function _templateObject() {
 var Container = styled.div(_templateObject(), styledSystem.width);
 
 function _templateObject$1() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  ", "\n"]);
 
   _templateObject$1 = function _templateObject() {
     return data;
@@ -148,7 +148,7 @@ function _templateObject$1() {
 
   return data;
 }
-var Flex = styled.div(_templateObject$1());
+var Flex = styled.div(_templateObject$1(), styledSystem.flex);
 
 function _templateObject$2() {
   var data = _taggedTemplateLiteral(["\n  color: ", ";\n  border: none;\n  text-transform: uppercase;\n  font-family: Roboto, sans-serif;\n  height: ", "px;\n  padding-right: ", "px;\n  padding-left: ", "px;\n"]);
@@ -434,8 +434,6 @@ var Circle$1 = styled.div(_templateObject3$1(), function (props) {
 });
 var Hidden$1 = styled.div(_templateObject4$1());
 function Switch$1(props) {
-  debugger;
-
   var _useState = React.useState(false),
       _useState2 = _slicedToArray(_useState, 2),
       isEnabled = _useState2[0],
