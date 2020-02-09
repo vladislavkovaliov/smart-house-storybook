@@ -6,7 +6,7 @@ import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import Filter from './filter';
 
-const items = [
+export const items = [
   {
     id: 'day',
     value: 'day'

@@ -5,15 +5,15 @@ import { get } from 'lodash';
 import { colors } from '../../constants';
 import { Container, Display } from "../../core/styled";
 
-const FilterContainer = styled(Container)`
+export const FilterContainer = styled(Container)`
   background-color: ${colors.primary};
   display: inline-flex;
   align-items: center;
-  height: 49px;
+  height: 50px;
   border-radius: 4px;
 `;
 
-const Item = styled(Display)`
+export const Item = styled(Display)`
   height: calc(100% - 6px);
   display: flex;
   align-items: center;
@@ -27,8 +27,9 @@ const Item = styled(Display)`
   }
 `;
 
-const Label = styled.label`
+export const Label = styled.label`
   height: 100%;
+  cursor: pointer;
   color: ${colors.white};
   text-transform: uppercase;
   padding: 0 4px;
@@ -45,14 +46,14 @@ class Filter extends React.Component {
 
   onChange = event => {
     const { onChange } = this.props;
-    const value = get(event, 'target.value', null);
+    const id = get(event, 'target.id', null);
 
     this.setState(
       {
-        currentValue: value
+        currentValue: id
       },
       () => {
-        onChange(value);
+        onChange(id);
       }
     );
   };
