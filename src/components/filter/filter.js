@@ -3,18 +3,17 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 import { colors } from '../../constants';
+import { Container, Display } from "../../core/styled";
 
-const StyledContainer = styled.div`
+const FilterContainer = styled(Container)`
   background-color: ${colors.primary};
   display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   height: 49px;
   border-radius: 4px;
 `;
 
-const StyledItem = styled.div`
+const Item = styled(Display)`
   height: calc(100% - 6px);
   display: flex;
   align-items: center;
@@ -28,7 +27,7 @@ const StyledItem = styled.div`
   }
 `;
 
-const StyledLabel = styled.label`
+const Label = styled.label`
   height: 100%;
   color: ${colors.white};
   text-transform: uppercase;
@@ -58,62 +57,44 @@ class Filter extends React.Component {
     );
   };
 
-  static getDerivedStateFromProps(props) {
-    const { reset } = props;
-
-    if (reset === true) {
-      return {
-        currentValue: null
-      };
-    }
-
-    return null;
-  }
-
   render() {
     const { currentValue } = this.state;
     const { items, name } = this.props;
 
     return (
-      <StyledContainer>
+      <FilterContainer>
         {items.map(item => {
           return (
-            <StyledItem data-selected={currentValue === item.value} key={item.id}>
-              <StyledLabel htmlFor={item.id}>{item.value}</StyledLabel>
-              <input
-                style={{
-                  display: 'none'
-                }}
-                onChange={this.onChange}
-                name={name}
-                type="radio"
-                id={item.id}
-                value={item.value}
-                checked={currentValue === item.value}
-              />
-            </StyledItem>
+            <Item data-selected={currentValue === item.value} key={item.id}>
+              <Label htmlFor={item.id}>{item.value}</Label>
+              <Display display="none">
+                <input
+                  onChange={this.onChange}
+                  name={name}
+                  type="radio"
+                  id={item.id}
+                  value={item.value}
+                  checked={currentValue === item.value}
+                />
+              </Display>
+            </Item>
           );
         })}
-      </StyledContainer>
+      </FilterContainer>
     );
   }
 }
 
 Filter.propTypes = {
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       value: PropTypes.string
-    })
+    }).isRequired,
   ).isRequired,
   name: PropTypes.string.isRequired,
-  reset: PropTypes.bool,
   defaultValue: PropTypes.string.isRequired,
-};
-
-Filter.defaultProps = {
-  onChange: () => {},
 };
 
 export default Filter;

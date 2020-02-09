@@ -28,10 +28,9 @@ const items = [
 storiesOf('Filter', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('<Filter />', () => {
+  .add('basic <Filter />', () => {
     return (
       <Filter
-        reset={boolean('reset', false)}
         items={items}
         name="filter"
         onChange={action('onChange')}
