@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { color } from 'styled-system';
 
-import { Styled } from '../../core';
+import { Container } from '../../core/styled';
 import { colors } from '../../constants';
 
 export const StyledInput = styled.input`
@@ -24,11 +24,12 @@ export const StyledInput = styled.input`
   // TODO: could be removed
     -webkit-text-fill-color: red !important;   
   }
-  
+   
+  outline: none;
   ${color};
 `;
 
-export const StyledLabel = styled.label`
+export const Label = styled.label`
   font-size: 23px;
   font-weight: 300;
   font-family: Roboto, sans-serif;
@@ -40,13 +41,11 @@ export function Input(props) {
   const { blue: color, primary: bgColor } = colors;
 
   return (
-    <Styled.Container
+    <Container
       className={name}
       width={isFluid ? '100%' : width}
     >
-      <StyledLabel
-        htmlFor={id}
-      >{labelText}</StyledLabel>
+      <Label htmlFor={id}>{labelText}</Label>
       <StyledInput
         id={id}
         name={name}
@@ -55,22 +54,22 @@ export function Input(props) {
         type={type}
         {...restProps}
       />
-    </Styled.Container>
+    </Container>
   );
 }
 
 Input.propTypes = {
-  onChange: PropTypes.func,
-  type: PropTypes.string,
-  width: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   labelText: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  width: PropTypes.string,
   isFluid: PropTypes.bool,
 };
 
 Input.defaultProps = {
-  onChange: () => {},
   type: 'text',
   width: '327px',
   isFluid: false,
